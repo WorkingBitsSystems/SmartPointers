@@ -12,7 +12,7 @@
  * The SP class is similar to the std:shared_ptr<> class, but is not
  * interchangeable as it uses it's own internal count and UP.
  *
- * @see UP.h
+ * @see UP.h MemCache.h
  *
  * @copyright Copyright(C) Working Bits Systems, LLC 2023
  */
@@ -22,6 +22,7 @@
 #include <mutex>
 
 #include "UP.h"
+#include "MemCache.h"
 
 
 /**
@@ -321,7 +322,10 @@ namespace wbs
         // existing object (see assignment from UPs).  For this implementation,
         // that could be mitigated by using an object/memory pool for this
         // class.
+        // @note Uses MemCache to minimize overhead of allocating
+        //       InternalObjects.
         class InternalObject
+        : public MemCache< InternalObject >
         {
         public:
             // Constructors, destructor, and Assignment operator ---------------

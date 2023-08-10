@@ -1,17 +1,13 @@
-//!
-//! \file SmartPointers.h
-//!
-//! \remarks {
-//!            General include for all smart pointer types.
-//!          }
-//! \see     {
-//!            op.h
-//!            pp.h
-//!            tp.h
-//!            sp.h
-//!          }
-//! Copyright(C) - Working Bits Systems, LLC, 2013
-//!
+/**
+ * @file SmartPointers.h
+ *
+ * Abstract:
+ * General include for all smart pointer types.
+ *
+ * @see UP.h SP.h WP.h, TP.h
+ *
+ * @copyright Working Bits Systems, LLC, 2023
+ */
 #ifndef _SMARTPOINTERS_H_
 #define _SMARTPOINTERS_H_
 
